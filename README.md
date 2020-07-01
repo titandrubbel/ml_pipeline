@@ -12,7 +12,7 @@ This repository contains the Defect Prediction pipeline build upon Azure Machine
 - training.py:
 - evaluate.py:
 
-## Deploy scripts
+## Deployment scripts
 - conda_dependencies.yml:
 - scoring.py:
 - container_image:
