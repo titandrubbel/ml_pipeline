@@ -15,8 +15,7 @@ This repository contains the script used to build the Defect Prediction pipeline
 ## Deployment scripts
 - conda_dependencies.yml: The file contains the list of dependencies to prepare the environment needed for scoring.py
 - scoring.py: Picks up the registed model and return the data in a json format
-- container_image.py: Takes the model from the evaulate step (if there is any) and creates a docker image and publishes it.
-- aci_deployment.py:  Takes the docker image frmo the previous step and creates an aci cluster and deploys the web service on it
+- aci_webservice.py:  Creates docker image and deploys the web service on it
 
 
 
