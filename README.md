@@ -13,10 +13,10 @@ This repository contains the Defect Prediction pipeline build upon Azure Machine
 - evaluate.py: Evaluates the trained model with the model in production. If the production model performs better the below steps are skipped
 
 ## Deployment scripts
-- conda_dependencies.yml:
-- scoring.py:
-- container_image:
-- aci_deployment.py:
+- conda_dependencies.yml: The file contains the list of dependencies to prepare the environment needed for scoring.py
+- scoring.py: 
+- container_image.py: Takes the model from the evaulate step (if there is any) and creates a docker image and publishes it.
+- aci_deployment.py:  Takes the docker image frmo the previous step and creates an aci cluster and deploys the web service on it
 
 
 
