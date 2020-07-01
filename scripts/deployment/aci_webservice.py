@@ -91,7 +91,7 @@ with open(args.aci_store+"/aci_webservice.json", "w") as outfile:
 pipeline_datastore = Datastore(ws, "datastore_pipeline")
 
 #Upload production model to main blob folder
-pipeline_datastore.upload_files([args.aci_store+"/aci_service.json"], target_path="webservice"+'/'+args.repo_owner+'/'+args.repo_name, overwrite=True)
+pipeline_datastore.upload_files([args.aci_store+"/aci_webservice.json"], target_path="webservice"+'/'+args.repo_owner+'/'+args.repo_name, overwrite=True)
     
 print("Deployed ACI Webservice: {} \nWebservice Uri: {}".format(service.name, service.scoring_uri)
     
