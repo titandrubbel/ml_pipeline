@@ -6,11 +6,11 @@ This repository contains the Defect Prediction pipeline build upon Azure Machine
 - config.json: Provides the subscription id, resource group and workspace name ot create/connect to an Azure ML service workspce.
 
 ## Pipeline scripts
-- github_cloner.py:
-- repo_miner.py:
-- cleaning.py:
-- training.py:
-- evaluate.py:
+- github_cloner.py: Reads the arguments and clones the corresponding repository into the blobstore
+- repo_miner.py: Reads the cloned GitHub data and extracts metrics which will be saved as a csv file into the blobstore
+- cleaning.py: Removes useless oberservations from the produced metrics and saves the cleaned metrics as a csv file into the blob store
+- training.py: Consumes the cleaned metrics and runs a binary classification model (decision tree) making use of the walk-foward_relase.py file which provides the code to train the model
+- evaluate.py: Evaluates the trained model with the model in production. If the production model performs better the below steps are skipped
 
 ## Deployment scripts
 - conda_dependencies.yml:
